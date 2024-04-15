@@ -7,9 +7,9 @@ license = "MIT"
 authors = ["extrawurst <mail@rusticorn.com>"]
 documentation = "https://docs.rs/bevy_ios_review"
 repository = "https://github.com/extrawurst/bevy_ios_review"
-keywords = ["bevy", "gamedev", "mobile", "ios", "objc", "swift"]
+keywords = ["bevy", "gamedev", "mobile", "ios", "swift"]
 description = "Bevy plugin for to request ios native review API from within the App"
 
 [dependencies]
-bevy = { version = "0.13", default-features = false }
-winit = { version = "0.29", default-features = false }
+bevy = { version = "0.13", default-features = false, features = ["bevy_winit"] }
+winit = { version = "0.29", default-features = false, features = ["rwh_06"] }
