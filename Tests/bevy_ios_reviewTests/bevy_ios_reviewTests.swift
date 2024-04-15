@@ -1,7 +1,7 @@
 import XCTest
-@testable import bevy_ios_native
+@testable import bevy_ios_review
 
-final class bevy_ios_nativeTests: XCTestCase {
+final class bevy_ios_reviewTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

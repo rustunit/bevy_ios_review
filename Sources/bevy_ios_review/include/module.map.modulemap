@@ -1,0 +1,12 @@
+//
+//  module.map.modulemap
+//  
+//
+//  Created by Stephan on 15.04.24.
+//
+
+module bevy_ios_review {
+    header "bevy_ios_review.h"
+
+    export *
+}
