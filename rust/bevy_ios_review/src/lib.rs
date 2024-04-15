@@ -1,3 +1,5 @@
+#![doc = include_str!("README.md")]
+
 mod native;
 
 use bevy::{prelude::*, window::PrimaryWindow};

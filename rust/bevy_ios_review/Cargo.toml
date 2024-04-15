@@ -1,12 +1,12 @@
 [package]
 name = "bevy_ios_review"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 readme = "../../readme.md"
 license = "MIT"
 authors = ["extrawurst <mail@rusticorn.com>"]
 documentation = "https://docs.rs/bevy_ios_review"
-repository = "https://github.com/extrawurst/bevy_ios_review"
+repository = "https://github.com/rustunit/bevy_ios_review"
 keywords = ["bevy", "gamedev", "mobile", "ios", "swift"]
 description = "Bevy plugin for to request ios native review API from within the App"
 

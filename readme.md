@@ -27,14 +27,15 @@ bevy_ios_review = { version = "0.1" }
 
 ### 3. Setup Plugin
 
-Initialize Bevy Plugin
-```
+Initialize Bevy Plugin:
+
+```rust
 app.add_plugins(bevy_ios_review::IosRequestReviewPlugin);
 ```
 
 Trigger Review Event in your application code:
 
-```
+```rust
 fn some_system(mut event: EventWriter<IosRequestReview>) {
     event.send(IosRequestReview);
 }
