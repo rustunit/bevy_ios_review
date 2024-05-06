@@ -7,6 +7,8 @@ Rust crate and Swift package to easily integrate iOS's `requestReview` API into 
 ![example](./assets/example.png)
 example screenshot from our game using this crate: [zoolitaire.com](https://zoolitaire.com)
 
+See also [bevy_ios_iap](https://github.com/rustunit/bevy_ios_iap), [bevy_ios_notifications](https://github.com/rustunit/bevy_ios_notifications), [bevy_ios_gamecenter](https://github.com/rustunit/bevy_ios_gamecenter), [bevy_ios_alerts](https://github.com/rustunit/bevy_ios_alerts), [bevy_ios_review](https://github.com/rustunit/bevy_ios_review) & [bevy_ios_impact](https://github.com/rustunit/bevy_ios_impact)
+
 ## Instructions
 
 1. Add to XCode: Add SPM (Swift Package Manager) dependency
