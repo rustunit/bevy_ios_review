@@ -48,6 +48,13 @@ fn some_system(mut event: EventWriter<IosRequestReview>) {
 }
 ```
 
+## Bevy version support
+
+|bevy|bevy\_ios\_review|
+|----|---|
+|0.14|0.2,main|
+|0.13|0.1|
+
 # License
 
 All code in this repository is dual-licensed under either:

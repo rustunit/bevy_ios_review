@@ -1,6 +1,7 @@
 mod native;
 
 use bevy::{prelude::*, window::PrimaryWindow};
+use winit::raw_window_handle::HasWindowHandle;
 
 #[derive(Event, Copy, Clone, Debug)]
 pub struct IosRequestReview;
@@ -16,7 +17,6 @@ impl Plugin for IosRequestReviewPlugin {
     }
 }
 
-#[allow(deprecated)]
 fn process_events(
     mut events: EventReader<IosRequestReview>,
     windows: NonSend<bevy::winit::WinitWindows>,
@@ -24,13 +24,14 @@ fn process_events(
 ) {
     while let Some(_) = events.read().next() {
         let entity = window_query.single();
-        let raw_window = windows.get_window(entity).unwrap();
-        match winit::raw_window_handle::HasRawWindowHandle::raw_window_handle(&raw_window) {
-            Ok(winit::raw_window_handle::RawWindowHandle::UiKit(ios_handle)) => {
-                let ui_window: *mut std::ffi::c_void = ios_handle.ui_view.as_ptr();
+        let raw_window = windows.get_window(entity).expect("invalid window handle");
+        if let Ok(handle) = raw_window.window_handle() {
+            if let winit::raw_window_handle::RawWindowHandle::UiKit(handle) = handle.as_raw() {
+                let ui_window: *mut std::ffi::c_void = handle.ui_view.as_ptr();
                 native::request_review(ui_window);
+                continue;
             }
-            _ => warn!("Unsupported window."),
         }
+        warn!("Unsupported window.")
     }
 }

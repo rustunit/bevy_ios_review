@@ -1,6 +1,6 @@
 [package]
 name = "bevy_ios_review"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2021"
 readme = "../../readme.md"
 license = "MIT"
@@ -11,5 +11,5 @@ keywords = ["bevy", "gamedev", "mobile", "ios", "swift"]
 description = "Bevy plugin for to request ios native review API from within the App"
 
 [dependencies]
-bevy = { version = "0.13", default-features = false, features = ["bevy_winit"] }
-winit = { version = "0.29", default-features = false, features = ["rwh_06"] }
+bevy = { version = "0.14", default-features = false, features = ["bevy_winit"] }
+winit = { version = "0.30", default-features = false, features = ["rwh_06"] }
