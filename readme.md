@@ -1,6 +1,12 @@
 # bevy_ios_review
 
+[![Following released Bevy versions](https://img.shields.io/badge/Bevy%20tracking-released%20version-lightblue)](https://bevyengine.org/learn/quick-start/plugin-development/#main-branch-tracking)
 [![crates.io](https://img.shields.io/crates/v/bevy_ios_review.svg)](https://crates.io/crates/bevy_ios_review)
+[![docs.rs](https://docs.rs/bevy_ios_review/badge.svg)](https://docs.rs/bevy_ios_review)
+[![discord][sh_discord]][lk_discord]
+
+[sh_discord]: https://img.shields.io/discord/1176858176897953872?label=discord&color=5561E6
+[lk_discord]: https://discord.gg/rQNeEnMhus
 
 Rust crate and Swift package to easily integrate iOS's `requestReview` API into a Bevy application.
 
