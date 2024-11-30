@@ -10,10 +10,8 @@ pub struct IosRequestReviewPlugin;
 
 impl Plugin for IosRequestReviewPlugin {
     fn build(&self, app: &mut App) {
-        app.add_event::<IosRequestReview>().add_systems(
-            Update,
-            process_events.run_if(on_event::<IosRequestReview>()),
-        );
+        app.add_event::<IosRequestReview>()
+            .add_systems(Update, process_events.run_if(on_event::<IosRequestReview>));
     }
 }
 
