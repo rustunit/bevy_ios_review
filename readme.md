@@ -59,7 +59,7 @@ fn some_system(mut event: EventWriter<IosRequestReview>) {
 |bevy|bevy\_ios\_review|
 |----|---|
 |0.15|0.3,main|
-|0.14|0.2,main|
+|0.14|0.2|
 |0.13|0.1|
 
 # License
