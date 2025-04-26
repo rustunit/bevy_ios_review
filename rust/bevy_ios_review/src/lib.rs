@@ -21,7 +21,10 @@ fn process_events(
     window_query: Query<Entity, With<PrimaryWindow>>,
 ) {
     while let Some(_) = events.read().next() {
-        let entity = window_query.single();
+        let Ok(entity) = window_query.single() else {
+            error!("primary window not found");
+            continue;
+        };
         let raw_window = windows.get_window(entity).expect("invalid window handle");
         if let Ok(handle) = raw_window.window_handle() {
             if let winit::raw_window_handle::RawWindowHandle::UiKit(handle) = handle.as_raw() {

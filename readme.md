@@ -28,12 +28,12 @@ Go to `File` -> `Add Package Dependencies` and paste `https://github.com/rustuni
 
 ```
 cargo add bevy_ios_review
-``` 
+```
 
-or 
+or
 
 ```
-bevy_ios_review = { version = "0.3" }
+bevy_ios_review = { version = "0.4" }
 ```
 
 ### 3. Setup Plugin
@@ -69,7 +69,8 @@ fn some_system(mut event: EventWriter<IosRequestReview>) {
 
 |bevy|bevy\_ios\_review|
 |----|---|
-|0.15|0.3,main|
+|0.16|0.4,main|
+|0.15|0.3|
 |0.14|0.2|
 |0.13|0.1|
 
