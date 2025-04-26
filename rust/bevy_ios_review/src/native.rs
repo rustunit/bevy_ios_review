@@ -1,5 +1,5 @@
 #[cfg(target_os = "ios")]
-extern "C" {
+unsafe extern "C" {
     fn ios_request_review(view: *mut std::ffi::c_void);
 }
 
