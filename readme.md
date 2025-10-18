@@ -33,7 +33,7 @@ cargo add bevy_ios_review
 or
 
 ```
-bevy_ios_review = { version = "0.5" }
+bevy_ios_review = { version = "=0.5" }
 ```
 
 ### 3. Setup Plugin
