@@ -33,7 +33,7 @@ cargo add bevy_ios_review
 or
 
 ```
-bevy_ios_review = { version = "=0.5" }
+bevy_ios_review = { version = "=0.6" }
 ```
 
 ### 3. Setup Plugin
@@ -67,9 +67,10 @@ fn some_system(mut event: EventWriter<IosRequestReview>) {
 
 ## Bevy version support
 
-|bevy|bevy\_ios\_review|
+|bevy|crate|
 |----|---|
-|0.17|0.5,main|
+|0.18|0.6,main|
+|0.17|0.5|
 |0.16|0.4|
 |0.15|0.3|
 |0.14|0.2|

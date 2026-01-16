@@ -1,6 +1,6 @@
 [package]
 name = "bevy_ios_review"
-version = "0.5.0"
+version = "0.6.0"
 edition = "2024"
 readme = "../../readme.md"
 license = "MIT"
@@ -14,7 +14,7 @@ description = "Bevy plugin for to request ios native review API from within the 
 default-target = "x86_64-apple-darwin"
 
 [dependencies]
-bevy = { version = "0.17", default-features = false, features = [
+bevy = { version = "0.18", default-features = false, features = [
     "bevy_winit",
     "bevy_window",
     "bevy_log",
