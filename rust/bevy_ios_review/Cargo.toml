@@ -14,9 +14,9 @@ description = "Bevy plugin for to request ios native review API from within the 
 default-target = "x86_64-apple-darwin"
 
 [dependencies]
-bevy = { version = "0.18", default-features = false, features = [
-    "bevy_winit",
-    "bevy_window",
-    "bevy_log",
-] }
+bevy_ecs = { version = "0.18", default-features = false }
+bevy_app = { version = "0.18", default-features = false }
+bevy_window = { version = "0.18", default-features = false }
+bevy_log = { version = "0.18", default-features = false }
+bevy_winit = { version = "0.18", default-features = false }
 winit = { version = "0.30", default-features = false, features = ["rwh_06"] }

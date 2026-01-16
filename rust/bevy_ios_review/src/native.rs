@@ -10,11 +10,11 @@ pub fn request_review(view: *mut std::ffi::c_void) {
     });
 
     if let Err(e) = result {
-        bevy::log::error!("ffi error: {e:?}")
+        bevy_log::error!("ffi error: {e:?}")
     }
 }
 
 #[cfg(not(target_os = "ios"))]
 pub fn request_review(_view: *mut std::ffi::c_void) {
-    bevy::log::info!("request_review called");
+    bevy_log::info!("request_review called");
 }

@@ -1,6 +1,7 @@
 mod native;
 
-use bevy::prelude::*;
+use bevy_app::prelude::*;
+use bevy_ecs::prelude::*;
 use winit::raw_window_handle::HasWindowHandle;
 
 #[derive(Message, Copy, Clone, Debug)]
@@ -19,11 +20,11 @@ impl Plugin for IosRequestReviewPlugin {
 
 fn process_events(
     mut events: MessageReader<IosRequestReview>,
-    _non_send_marker: bevy::ecs::system::NonSendMarker,
-    window: Single<Entity, With<bevy::window::PrimaryWindow>>,
+    _non_send_marker: bevy_ecs::system::NonSendMarker,
+    window: Single<Entity, With<bevy_window::PrimaryWindow>>,
 ) {
     while let Some(_) = events.read().next() {
-        bevy::winit::WINIT_WINDOWS.with_borrow(|windows| {
+        bevy_winit::WINIT_WINDOWS.with_borrow(|windows| {
             let raw_window = windows.get_window(*window).expect("invalid window handle");
             if let Ok(handle) = raw_window.window_handle()
                 && let winit::raw_window_handle::RawWindowHandle::UiKit(handle) = handle.as_raw()
@@ -31,7 +32,7 @@ fn process_events(
                 let ui_window: *mut std::ffi::c_void = handle.ui_view.as_ptr();
                 native::request_review(ui_window);
             } else {
-                warn!("Unsupported window.");
+                bevy_log::warn!("Unsupported window.");
             }
         });
     }
