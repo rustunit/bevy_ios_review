@@ -1,6 +1,6 @@
 [package]
 name = "bevy_ios_review"
-version = "0.6.0"
+version = "0.6.1"
 edition = "2024"
 readme = "../../readme.md"
 license = "MIT"
