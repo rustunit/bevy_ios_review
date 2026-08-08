@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.7.0] - unreleased
+
+### Changes
+* call `SKStoreReviewController` directly via `objc2`, the Swift package dependency is gone
+* the XCode/SPM setup step is no longer needed
+* repo flattened: the crate now lives at the repository root
+
 ## [0.6.1] - 2026-01-16
 
 ### Changes

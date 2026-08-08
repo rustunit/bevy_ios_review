@@ -1,13 +1,13 @@
 [package]
 name = "bevy_ios_review"
-version = "0.6.1"
+version = "0.7.0"
 edition = "2024"
-readme = "../../readme.md"
+readme = "readme.md"
 license = "MIT"
 authors = ["extrawurst <mail@rusticorn.com>"]
 documentation = "https://docs.rs/bevy_ios_review"
 repository = "https://github.com/rustunit/bevy_ios_review"
-keywords = ["bevy", "gamedev", "mobile", "ios", "swift"]
+keywords = ["bevy", "gamedev", "mobile", "ios", "objc2"]
 description = "Bevy plugin for to request ios native review API from within the App"
 
 [package.metadata.docs.rs]
@@ -20,3 +20,18 @@ bevy_window = { version = "0.18", default-features = false }
 bevy_log = { version = "0.18", default-features = false }
 bevy_winit = { version = "0.18", default-features = false }
 winit = { version = "0.30", default-features = false, features = ["rwh_06"] }
+
+[target.'cfg(target_os = "ios")'.dependencies]
+objc2 = { version = "0.6", default-features = false, features = ["std"] }
+objc2-ui-kit = { version = "0.3", default-features = false, features = [
+    "std",
+    "UIResponder",
+    "UIScene",
+    "UIView",
+    "UIWindow",
+    "UIWindowScene",
+] }
+objc2-store-kit = { version = "0.3", default-features = false, features = [
+    "std",
+    "SKStoreReviewController",
+] }

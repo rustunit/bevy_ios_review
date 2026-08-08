@@ -8,23 +8,19 @@
 [sh_discord]: https://img.shields.io/discord/1176858176897953872?label=discord&color=5561E6
 [lk_discord]: https://discord.gg/rQNeEnMhus
 
-Rust crate and Swift package to easily integrate iOS's `requestReview` API into a Bevy application.
+Rust crate to easily integrate iOS's `requestReview` API into a Bevy application.
+
+Talks to `SKStoreReviewController` directly via [objc2](https://github.com/madsmtm/objc2) - no Swift package or XCode setup required.
 
 ![example](./assets/example.png)
 example screenshot from our game using this crate: [zoolitaire.com](https://zoolitaire.com)
 
 ## Instructions
 
-1. Add to XCode: Add SPM (Swift Package Manager) dependency
-2. Add Rust dependency
-3. Setup Plugin
+1. Add Rust dependency
+2. Setup Plugin
 
-### 1. Add to XCode
-
-Go to `File` -> `Add Package Dependencies` and paste `https://github.com/rustunit/bevy_ios_review.git` into the search bar on the top right:
-![xcode](./assets/xcode-spm.png)
-
-### 2. Add Rust dependency
+### 1. Add Rust dependency
 
 ```
 cargo add bevy_ios_review
@@ -33,10 +29,10 @@ cargo add bevy_ios_review
 or
 
 ```
-bevy_ios_review = { version = "=0.6" }
+bevy_ios_review = { version = "=0.7" }
 ```
 
-### 3. Setup Plugin
+### 2. Setup Plugin
 
 Initialize Bevy Plugin:
 
@@ -47,8 +43,8 @@ app.add_plugins(bevy_ios_review::IosRequestReviewPlugin);
 Trigger Review Event in your application code:
 
 ```rust
-fn some_system(mut event: EventWriter<IosRequestReview>) {
-    event.send(IosRequestReview);
+fn some_system(mut messages: MessageWriter<IosRequestReview>) {
+    messages.write(IosRequestReview);
 }
 ```
 
@@ -69,7 +65,8 @@ fn some_system(mut event: EventWriter<IosRequestReview>) {
 
 |bevy|crate|
 |----|---|
-|0.18|0.6,main|
+|0.18|0.7,main|
+|0.18|0.6|
 |0.17|0.5|
 |0.16|0.4|
 |0.15|0.3|
