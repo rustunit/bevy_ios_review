@@ -65,7 +65,7 @@ fn some_system(mut messages: MessageWriter<IosRequestReview>) {
 
 |bevy|crate|
 |----|---|
-|0.18|0.7,main|
+|0.19|0.7,main|
 |0.18|0.6|
 |0.17|0.5|
 |0.16|0.4|

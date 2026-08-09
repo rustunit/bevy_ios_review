@@ -7,9 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
-## [0.7.0] - unreleased
+## [0.7.0] - 2026-08-09
 
 ### Changes
+* Support Bevy `0.19`
 * call `SKStoreReviewController` directly via `objc2`, the Swift package dependency is gone
 * the XCode/SPM setup step is no longer needed
 * repo flattened: the crate now lives at the repository root
