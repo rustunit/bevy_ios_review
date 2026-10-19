@@ -29,7 +29,7 @@ cargo add bevy_ios_review
 or
 
 ```
-bevy_ios_review = { version = "=0.7" }
+bevy_ios_review = { version = "=0.8" }
 ```
 
 ### 2. Setup Plugin
@@ -65,7 +65,8 @@ fn some_system(mut messages: MessageWriter<IosRequestReview>) {
 
 |bevy|crate|
 |----|---|
-|0.19|0.7,main|
+|0.20|0.8,main|
+|0.19|0.7|
 |0.18|0.6|
 |0.17|0.5|
 |0.16|0.4|
